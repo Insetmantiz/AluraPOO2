@@ -9,11 +9,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
 	public static void main(String args[]){
-		Filme meuFilme = new Filme();
-		meuFilme.setNome("O poderoso chefão");
-		meuFilme.setAnoDeLancamento(1970);
+		Filme meuFilme = new Filme("O poderoso chefão",1972);
 		meuFilme.setDuracaoEmMinutos(180);
-		
 		meuFilme.avalia(8);
 		meuFilme.avalia(5);
 		meuFilme.avalia(10);
@@ -24,9 +21,7 @@ public class Principal {
 		//System.out.println(" ");
 		
 		
-		Serie minhaSerie = new Serie();
-		minhaSerie.setNome("Breaking Bad");	
-		minhaSerie.setAnoDeLancamento(2013);
+		Serie minhaSerie = new Serie("Breaking Bad",2010);
 		minhaSerie.setAtiva(false);
 		minhaSerie.setEpisodiosPorTemporada(6);
 		minhaSerie.setTemporadas(5);
@@ -57,17 +52,12 @@ public class Principal {
 		//filtro.filtra(episodio);
 		
 		// pode começar com var ao inicializar um objeto, faz uma inferëncia do tipo.
-		var filmeDoPaulo = new Filme();
-		filmeDoPaulo.setNome("Dogville");
+		var filmeDoPaulo = new Filme("Dogville",2003);
 		filmeDoPaulo.setDuracaoEmMinutos(200);
-		filmeDoPaulo.setAnoDeLancamento(2003);
 		filmeDoPaulo.avalia(10);
 		
-		var filmeLegal = new Filme();
-		filmeLegal.setNome("Era do Gelo 3");
-		filmeLegal.setDuracaoEmMinutos(60);
-		filmeLegal.setAnoDeLancamento(2010);
-		filmeLegal.avalia(8);
+		var filmeLegal = new Filme("Era do Gelo 3",2010);
+		filmeLegal.setDuracaoEmMinutos(60);		filmeLegal.avalia(8);
 		
 		//ArrayList<Tipo> nomeDaLista = new ArrayList<>()
 		ArrayList<Filme> listaDeFilmes = new ArrayList<>();
