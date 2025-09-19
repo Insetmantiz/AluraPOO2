@@ -19,5 +19,16 @@ public class Main {
 		var prodP1 = new ProdutoPerecivel("Lasanha",20.00,1);
 		prodP1.setDataValidade("10/09/2025");
 		System.out.println(prodP1);
+		
+		listaDeProdutos.add(prodP1);
+		
+		for(Produto produto:listaDeProdutos){
+			if(produto instanceof ProdutoPerecivel) {
+				ProdutoPerecivel pp = (ProdutoPerecivel) produto;
+				System.out.println(produto + " é perecivel");
+			}else {
+				System.out.println(produto + " não é perecível");
+			}
+		}
 	}
 }
